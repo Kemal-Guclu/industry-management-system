@@ -1,0 +1,37 @@
+{
+  "name": "industry-management-system",
+  "version": "1.0.0",
+  "description": "Industry Management System with REST and GraphQL APIs using Node.js, Express, MongoDB, and Mongoose",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev:backend": "npm run dev --workspace=backend",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "dev:rest": "npm run dev:rest --workspace=backend",
+    "dev:graphql": "npm run dev:graphql --workspace=backend",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "install:all": "npm install && npm install --workspace=backend && npm install --workspace=frontend",
+    "seed": "npm run seed --workspace=backend",
+    "test": "npm test --workspaces",
+    "build": "npm run build --workspace=frontend"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb",
+    "graphql",
+    "rest",
+    "api",
+    "mongoose",
+    "react"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.10"
+  }
+}
